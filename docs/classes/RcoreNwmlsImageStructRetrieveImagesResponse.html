@@ -1,0 +1,3221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1019480180"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1019480180" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/RcoreNwmlsImageClassMap.html">RcoreNwmlsImageClassMap</a></li>
+                                                    <li class="class"><a href="../classes/RcoreNwmlsImageServiceRetrieve.html">RcoreNwmlsImageServiceRetrieve</a></li>
+                                                    <li class="class"><a href="../classes/RcoreNwmlsImageStructRetrieveImages.html">RcoreNwmlsImageStructRetrieveImages</a></li>
+                                                    <li class="class"><a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html">RcoreNwmlsImageStructRetrieveImagesResponse</a></li>
+                                                    <li class="class"><a href="../classes/RcoreNwmlsImageWsdlClass.html">RcoreNwmlsImageWsdlClass</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>RcoreNwmlsImageStructRetrieveImagesResponse</h1>
+                    <p><em>This class stands for RcoreNwmlsImageStructRetrieveImagesResponse originally named RetrieveImagesResponse
+Meta informations extracted from the WSDL
+- from schema : {@link http://images.idx.nwmls.com/imageservice/imagequery.asmx?WSDL}</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html#method___set_state" class="">__set_state()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getSoapClient" class="">getSoapClient()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_initSoapClient" class="">initSoapClient()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getSoapClientClassName" class="">getSoapClientClassName()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getDefaultWsdlOptions" class="">getDefaultWsdlOptions()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setLocation" class="">setLocation()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getLastRequest" class="">getLastRequest()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getLastResponse" class="">getLastResponse()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getLastRequestHeaders" class="">getLastRequestHeaders()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getLastResponseHeaders" class="">getLastResponseHeaders()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getFormatedXml" class="">getFormatedXml()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_convertStringHeadersToArray" class="">convertStringHeadersToArray()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setSoapHeader" class="">setSoapHeader()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setHttpHeader" class="">setHttpHeader()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_length" class="">length()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_count" class="">count()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_current" class="">current()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_next" class="">next()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_rewind" class="">rewind()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_valid" class="">valid()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_key" class="">key()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_item" class="">item()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_add" class="">add()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_toSend" class="">toSend()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_first" class="">first()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_last" class="">last()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_offsetExists" class="">offsetExists()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_offsetGet" class="">offsetGet()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_offsetSet" class="">offsetSet()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_offsetUnset" class="">offsetUnset()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getResult" class="">getResult()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getLastError" class="">getLastError()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getLastErrorForMethod" class="">getLastErrorForMethod()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getInternArrayToIterate" class="">getInternArrayToIterate()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setInternArrayToIterate" class="">setInternArrayToIterate()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getInternArrayToIterateOffset" class="">getInternArrayToIterateOffset()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_initInternArrayToIterate" class="">initInternArrayToIterate()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setInternArrayToIterateOffset" class="">setInternArrayToIterateOffset()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getInternArrayToIterateIsArray" class="">getInternArrayToIterateIsArray()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setInternArrayToIterateIsArray" class="">setInternArrayToIterateIsArray()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method__set" class="">_set()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method__get" class="">_get()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_getAttributeName" class="">getAttributeName()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_valueIsValid" class="">valueIsValid()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html#method___toString" class="">__toString()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html#method_getRetrieveImagesResult" class="">getRetrieveImagesResult()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html#method_setRetrieveImagesResult" class="">setRetrieveImagesResult()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html#property_RetrieveImagesResult" class="">$RetrieveImagesResult</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_URL" class="">WSDL_URL</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_VALUE_WSDL_URL" class="">VALUE_WSDL_URL</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_LOGIN" class="">WSDL_LOGIN</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_PASSWD" class="deprecated">WSDL_PASSWD</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_PASSWORD" class="">WSDL_PASSWORD</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_TRACE" class="">WSDL_TRACE</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_EXCPTS" class="deprecated">WSDL_EXCPTS</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_EXCEPTIONS" class="">WSDL_EXCEPTIONS</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_CACHE_WSDL" class="">WSDL_CACHE_WSDL</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_STREAM_CONTEXT" class="">WSDL_STREAM_CONTEXT</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_SOAP_VERSION" class="">WSDL_SOAP_VERSION</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_COMPRESSION" class="">WSDL_COMPRESSION</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_ENCODING" class="">WSDL_ENCODING</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_CONNECTION_TIMEOUT" class="">WSDL_CONNECTION_TIMEOUT</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_TYPEMAP" class="">WSDL_TYPEMAP</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_USER_AGENT" class="">WSDL_USER_AGENT</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_FEATURES" class="">WSDL_FEATURES</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_KEEP_ALIVE" class="">WSDL_KEEP_ALIVE</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_PROXY_HOST" class="">WSDL_PROXY_HOST</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_PROXY_PORT" class="">WSDL_PROXY_PORT</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_PROXY_LOGIN" class="">WSDL_PROXY_LOGIN</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_PROXY_PASSWORD" class="">WSDL_PROXY_PASSWORD</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_LOCAL_CERT" class="">WSDL_LOCAL_CERT</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_PASSPHRASE" class="">WSDL_PASSPHRASE</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_AUTHENTICATION" class="">WSDL_AUTHENTICATION</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#constant_WSDL_SSL_METHOD" class="">WSDL_SSL_METHOD</a><br />
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setSoapClient" class="">setSoapClient()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setResult" class="">setResult()</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_saveLastError" class="">saveLastError()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#method_setLastError" class="">setLastError()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#property_soapClient" class="">$soapClient</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#property_result" class="">$result</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#property_lastError" class="">$lastError</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#property_internArrayToIterate" class="">$internArrayToIterate</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#property_internArrayToIterateIsArray" class="">$internArrayToIterateIsArray</a><br />
+                                                                    <a href="../classes/RcoreNwmlsImageWsdlClass.html#property_internArrayToIterateOffset" class="">$internArrayToIterateOffset</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Retrieve.Response.RcoreNwmlsImageStructRetrieveImagesResponse.html"><div class="path-wrapper">Retrieve/Response/RcoreNwmlsImageStructRetrieveImagesResponse.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">RcoreNwmlsImage\Structs</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <div class="namespace-wrapper">\stdClass</div>
+                                                                    
+                                        <div class="namespace-wrapper"><a href="../classes/RcoreNwmlsImageWsdlClass.html">\RcoreNwmlsImageWsdlClass</a></div>
+                                                                                                    <div class="namespace-wrapper">\RcoreNwmlsImageStructRetrieveImagesResponse</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>RapidMod.com</p>
+                                                                    <p>813.330.0522</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                version
+                            </th>
+                            <td>
+                                                                    
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                date
+                            </th>
+                            <td>
+                                                                    <p>2017-01-04</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                                    <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_URL" name="constant_WSDL_URL" class="anchor"></a>
+            <article id="constant_WSDL_URL" class="constant">
+                <h3 class="">WSDL_URL</h3>
+                <pre class="signature">WSDL_URL</pre>
+                <p><em>Option key to define WSDL url</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_VALUE_WSDL_URL" name="constant_VALUE_WSDL_URL" class="anchor"></a>
+            <article id="constant_VALUE_WSDL_URL" class="constant">
+                <h3 class="">VALUE_WSDL_URL</h3>
+                <pre class="signature">VALUE_WSDL_URL</pre>
+                <p><em>Constant to define the default WSDL URI</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_LOGIN" name="constant_WSDL_LOGIN" class="anchor"></a>
+            <article id="constant_WSDL_LOGIN" class="constant">
+                <h3 class="">WSDL_LOGIN</h3>
+                <pre class="signature">WSDL_LOGIN</pre>
+                <p><em>Option key to define WSDL login</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_PASSWD" name="constant_WSDL_PASSWD" class="anchor"></a>
+            <article id="constant_WSDL_PASSWD" class="constant">
+                <h3 class="deprecated">WSDL_PASSWD</h3>
+                <pre class="signature">WSDL_PASSWD</pre>
+                <p><em>Option key to define WSDL password</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    use WSDL_PASSWORD instead
+                </aside>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_PASSWORD" name="constant_WSDL_PASSWORD" class="anchor"></a>
+            <article id="constant_WSDL_PASSWORD" class="constant">
+                <h3 class="">WSDL_PASSWORD</h3>
+                <pre class="signature">WSDL_PASSWORD</pre>
+                <p><em>Option key to define WSDL password</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_TRACE" name="constant_WSDL_TRACE" class="anchor"></a>
+            <article id="constant_WSDL_TRACE" class="constant">
+                <h3 class="">WSDL_TRACE</h3>
+                <pre class="signature">WSDL_TRACE</pre>
+                <p><em>Option key to define WSDL trace option</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_EXCPTS" name="constant_WSDL_EXCPTS" class="anchor"></a>
+            <article id="constant_WSDL_EXCPTS" class="constant">
+                <h3 class="deprecated">WSDL_EXCPTS</h3>
+                <pre class="signature">WSDL_EXCPTS</pre>
+                <p><em>Option key to define WSDL exceptions</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <aside class="alert alert-block alert-error">
+                    <h4>Deprecated</h4>
+                    use WSDL_EXCEPTIONS instead
+                </aside>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_EXCEPTIONS" name="constant_WSDL_EXCEPTIONS" class="anchor"></a>
+            <article id="constant_WSDL_EXCEPTIONS" class="constant">
+                <h3 class="">WSDL_EXCEPTIONS</h3>
+                <pre class="signature">WSDL_EXCEPTIONS</pre>
+                <p><em>Option key to define WSDL exceptions</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_CACHE_WSDL" name="constant_WSDL_CACHE_WSDL" class="anchor"></a>
+            <article id="constant_WSDL_CACHE_WSDL" class="constant">
+                <h3 class="">WSDL_CACHE_WSDL</h3>
+                <pre class="signature">WSDL_CACHE_WSDL</pre>
+                <p><em>Option key to define WSDL cache_wsdl</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_STREAM_CONTEXT" name="constant_WSDL_STREAM_CONTEXT" class="anchor"></a>
+            <article id="constant_WSDL_STREAM_CONTEXT" class="constant">
+                <h3 class="">WSDL_STREAM_CONTEXT</h3>
+                <pre class="signature">WSDL_STREAM_CONTEXT</pre>
+                <p><em>Option key to define WSDL stream_context</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_SOAP_VERSION" name="constant_WSDL_SOAP_VERSION" class="anchor"></a>
+            <article id="constant_WSDL_SOAP_VERSION" class="constant">
+                <h3 class="">WSDL_SOAP_VERSION</h3>
+                <pre class="signature">WSDL_SOAP_VERSION</pre>
+                <p><em>Option key to define WSDL soap_version</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_COMPRESSION" name="constant_WSDL_COMPRESSION" class="anchor"></a>
+            <article id="constant_WSDL_COMPRESSION" class="constant">
+                <h3 class="">WSDL_COMPRESSION</h3>
+                <pre class="signature">WSDL_COMPRESSION</pre>
+                <p><em>Option key to define WSDL compression</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_ENCODING" name="constant_WSDL_ENCODING" class="anchor"></a>
+            <article id="constant_WSDL_ENCODING" class="constant">
+                <h3 class="">WSDL_ENCODING</h3>
+                <pre class="signature">WSDL_ENCODING</pre>
+                <p><em>Option key to define WSDL encoding</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_CONNECTION_TIMEOUT" name="constant_WSDL_CONNECTION_TIMEOUT" class="anchor"></a>
+            <article id="constant_WSDL_CONNECTION_TIMEOUT" class="constant">
+                <h3 class="">WSDL_CONNECTION_TIMEOUT</h3>
+                <pre class="signature">WSDL_CONNECTION_TIMEOUT</pre>
+                <p><em>Option key to define WSDL connection_timeout</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_TYPEMAP" name="constant_WSDL_TYPEMAP" class="anchor"></a>
+            <article id="constant_WSDL_TYPEMAP" class="constant">
+                <h3 class="">WSDL_TYPEMAP</h3>
+                <pre class="signature">WSDL_TYPEMAP</pre>
+                <p><em>Option key to define WSDL typemap</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_USER_AGENT" name="constant_WSDL_USER_AGENT" class="anchor"></a>
+            <article id="constant_WSDL_USER_AGENT" class="constant">
+                <h3 class="">WSDL_USER_AGENT</h3>
+                <pre class="signature">WSDL_USER_AGENT</pre>
+                <p><em>Option key to define WSDL user_agent</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_FEATURES" name="constant_WSDL_FEATURES" class="anchor"></a>
+            <article id="constant_WSDL_FEATURES" class="constant">
+                <h3 class="">WSDL_FEATURES</h3>
+                <pre class="signature">WSDL_FEATURES</pre>
+                <p><em>Option key to define WSDL features</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_KEEP_ALIVE" name="constant_WSDL_KEEP_ALIVE" class="anchor"></a>
+            <article id="constant_WSDL_KEEP_ALIVE" class="constant">
+                <h3 class="">WSDL_KEEP_ALIVE</h3>
+                <pre class="signature">WSDL_KEEP_ALIVE</pre>
+                <p><em>Option key to define WSDL keep_alive</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_PROXY_HOST" name="constant_WSDL_PROXY_HOST" class="anchor"></a>
+            <article id="constant_WSDL_PROXY_HOST" class="constant">
+                <h3 class="">WSDL_PROXY_HOST</h3>
+                <pre class="signature">WSDL_PROXY_HOST</pre>
+                <p><em>Option key to define WSDL proxy_host</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_PROXY_PORT" name="constant_WSDL_PROXY_PORT" class="anchor"></a>
+            <article id="constant_WSDL_PROXY_PORT" class="constant">
+                <h3 class="">WSDL_PROXY_PORT</h3>
+                <pre class="signature">WSDL_PROXY_PORT</pre>
+                <p><em>Option key to define WSDL proxy_port</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_PROXY_LOGIN" name="constant_WSDL_PROXY_LOGIN" class="anchor"></a>
+            <article id="constant_WSDL_PROXY_LOGIN" class="constant">
+                <h3 class="">WSDL_PROXY_LOGIN</h3>
+                <pre class="signature">WSDL_PROXY_LOGIN</pre>
+                <p><em>Option key to define WSDL proxy_login</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_PROXY_PASSWORD" name="constant_WSDL_PROXY_PASSWORD" class="anchor"></a>
+            <article id="constant_WSDL_PROXY_PASSWORD" class="constant">
+                <h3 class="">WSDL_PROXY_PASSWORD</h3>
+                <pre class="signature">WSDL_PROXY_PASSWORD</pre>
+                <p><em>Option key to define WSDL proxy_password</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_LOCAL_CERT" name="constant_WSDL_LOCAL_CERT" class="anchor"></a>
+            <article id="constant_WSDL_LOCAL_CERT" class="constant">
+                <h3 class="">WSDL_LOCAL_CERT</h3>
+                <pre class="signature">WSDL_LOCAL_CERT</pre>
+                <p><em>Option key to define WSDL local_cert</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_PASSPHRASE" name="constant_WSDL_PASSPHRASE" class="anchor"></a>
+            <article id="constant_WSDL_PASSPHRASE" class="constant">
+                <h3 class="">WSDL_PASSPHRASE</h3>
+                <pre class="signature">WSDL_PASSPHRASE</pre>
+                <p><em>Option key to define WSDL passphrase</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_AUTHENTICATION" name="constant_WSDL_AUTHENTICATION" class="anchor"></a>
+            <article id="constant_WSDL_AUTHENTICATION" class="constant">
+                <h3 class="">WSDL_AUTHENTICATION</h3>
+                <pre class="signature">WSDL_AUTHENTICATION</pre>
+                <p><em>Option key to define WSDL authentication</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WSDL_SSL_METHOD" name="constant_WSDL_SSL_METHOD" class="anchor"></a>
+            <article id="constant_WSDL_SSL_METHOD" class="constant">
+                <h3 class="">WSDL_SSL_METHOD</h3>
+                <pre class="signature">WSDL_SSL_METHOD</pre>
+                <p><em>Option key to define WSDL ssl_method</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_RetrieveImagesResult" name="property_RetrieveImagesResult" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$RetrieveImagesResult</h3>
+                <pre class="signature">$RetrieveImagesResult : string</pre>
+                <p><em>The RetrieveImagesResult
+Meta informations extracted from the WSDL
+- maxOccurs : 1
+- minOccurs : 0</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_soapClient" name="property_soapClient" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$soapClient</h3>
+                <pre class="signature">$soapClient : \SoapClient</pre>
+                <p><em>Soapclient called to communicate with the actual SOAP Service</em></p>
+                
+
+                                <h4>Type</h4>
+                \SoapClient
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_result" name="property_result" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$result</h3>
+                <pre class="signature">$result : mixed</pre>
+                <p><em>Contains Soap call result</em></p>
+                
+
+                                <h4>Type</h4>
+                mixed
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_lastError" name="property_lastError" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$lastError</h3>
+                <pre class="signature">$lastError : array</pre>
+                <p><em>Contains last errors</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_internArrayToIterate" name="property_internArrayToIterate" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$internArrayToIterate</h3>
+                <pre class="signature">$internArrayToIterate : array</pre>
+                <p><em>Array that contains values when only one parameter is set when calling __construct method</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_internArrayToIterateIsArray" name="property_internArrayToIterateIsArray" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$internArrayToIterateIsArray</h3>
+                <pre class="signature">$internArrayToIterateIsArray : boolean</pre>
+                <p><em>Bool that tells if array is set or not</em></p>
+                
+
+                                <h4>Type</h4>
+                boolean
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_internArrayToIterateOffset" name="property_internArrayToIterateOffset" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$internArrayToIterateOffset</h3>
+                <pre class="signature">$internArrayToIterateOffset : integer</pre>
+                <p><em>Items index browser</em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(string  <span class="argument">$_retrieveImagesResult = NULL</span>) : \RcoreNwmlsImageStructRetrieveImagesResponse</pre>
+                <p><em>Constructor method for RetrieveImagesResponse</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_retrieveImagesResult </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html">\RcoreNwmlsImageStructRetrieveImagesResponse</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\parent::__construct()</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___set_state" name="method___set_state" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__set_state()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__set_state(array  <span class="argument">$_array</span>, string  <span class="argument">$_className = __CLASS__</span>) : \RcoreNwmlsImageStructRetrieveImagesResponse</pre>
+                <p><em>Method called when an object has been exported with var_export() functions
+It allows to return an object instantiated with the values</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$_array </td>
+                                <td><p>the exported values</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_className </td>
+                                <td><p>optional (used by inherited classes in order to always call this method)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/RcoreNwmlsImageStructRetrieveImagesResponse.html">\RcoreNwmlsImageStructRetrieveImagesResponse</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html#method___set_state"><span class="namespace-wrapper">\RcoreNwmlsImageWsdlClass::__set_state()</span></a></dd>
+                                                                                                <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::__set_state()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getSoapClient" name="method_getSoapClient" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getSoapClient()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getSoapClient() : \SoapClient</pre>
+                <p><em>Static method getting current SoapClient</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \SoapClient
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_initSoapClient" name="method_initSoapClient" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">initSoapClient()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">initSoapClient(array  <span class="argument">$_wsdlOptions</span>) : void</pre>
+                <p><em>Method initiating SoapClient</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$_wsdlOptions </td>
+                                <td><p>WSDL options</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageClassMap::classMap()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::getDefaultWsdlOptions()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::getSoapClientClassName()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::setSoapClient()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getSoapClientClassName" name="method_getSoapClientClassName" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getSoapClientClassName()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getSoapClientClassName() : string</pre>
+                <p><em>Returns the SoapClient class name to use to create the instance of the SoapClient.</em></p>
+                <p>The SoapClient class is determined based on the package name.
+If a class is named as {RcoreNwmlsImage}SoapClient, then this is the class that will be used.
+Be sure that this class inherits from the native PHP SoapClient class and this class has been loaded or can be loaded.
+The goal is to allow the override of the SoapClient without having to modify this generated class.
+Then the overridding SoapClient class can override for example the SoapClient::__doRequest() method if it is needed.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDefaultWsdlOptions" name="method_getDefaultWsdlOptions" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDefaultWsdlOptions()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDefaultWsdlOptions() : array</pre>
+                <p><em>Method returning all default options values</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::WSDL_CACHE_WSDL</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_COMPRESSION</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_CONNECTION_TIMEOUT</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_ENCODING</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_EXCEPTIONS</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_FEATURES</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_LOGIN</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_PASSWORD</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_SOAP_VERSION</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_STREAM_CONTEXT</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_TRACE</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_TYPEMAP</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_URL</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::VALUE_WSDL_URL</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_USER_AGENT</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_PROXY_HOST</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_PROXY_PORT</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_PROXY_LOGIN</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_PROXY_PASSWORD</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_LOCAL_CERT</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_PASSPHRASE</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_AUTHENTICATION</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::WSDL_SSL_METHOD</dd>
+                                            <dd>SOAP_SINGLE_ELEMENT_ARRAYS</dd>
+                                            <dd>SOAP_USE_XSI_ARRAY_TYPE</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setLocation" name="method_setLocation" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setLocation()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setLocation(string  <span class="argument">$_location</span>) </pre>
+                <p><em>Allows to set the SoapClient location to call</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_location </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getSoapClient()</dd>
+                                            <dd>SoapClient::__setLocation()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLastRequest" name="method_getLastRequest" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLastRequest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLastRequest(boolean  <span class="argument">$_asDomDocument = false</span>) : \DOMDocument|string</pre>
+                <p><em>Returns the last request content as a DOMDocument or as a formated XML String</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_asDomDocument </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DOMDocument|string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\SoapClient::__getLastRequest()</span></a></dd>
+                                                                                                <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getSoapClient()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::getFormatedXml()</dd>
+                                            <dd>SoapClient::__getLastRequest()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLastResponse" name="method_getLastResponse" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLastResponse()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLastResponse(boolean  <span class="argument">$_asDomDocument = false</span>) : \DOMDocument|string</pre>
+                <p><em>Returns the last response content as a DOMDocument or as a formated XML String</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_asDomDocument </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DOMDocument|string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\SoapClient::__getLastResponse()</span></a></dd>
+                                                                                                <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getSoapClient()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::getFormatedXml()</dd>
+                                            <dd>SoapClient::__getLastResponse()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLastRequestHeaders" name="method_getLastRequestHeaders" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLastRequestHeaders()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLastRequestHeaders(boolean  <span class="argument">$_asArray = false</span>) : null|string|array</pre>
+                <p><em>Returns the last request headers used by the SoapClient object as the original value or an array</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_asArray </td>
+                                <td><p>allows to get the headers in an associative array</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null|string|array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\SoapClient::__getLastRequestHeaders()</span></a></dd>
+                                                                                                <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getSoapClient()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::convertStringHeadersToArray()</dd>
+                                            <dd>SoapClient::__getLastRequestHeaders()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLastResponseHeaders" name="method_getLastResponseHeaders" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLastResponseHeaders()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLastResponseHeaders(boolean  <span class="argument">$_asArray = false</span>) : null|string|array</pre>
+                <p><em>Returns the last response headers used by the SoapClient object as the original value or an array</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_asArray </td>
+                                <td><p>allows to get the headers in an associative array</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null|string|array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\SoapClient::__getLastResponseHeaders()</span></a></dd>
+                                                                                                <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getSoapClient()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::convertStringHeadersToArray()</dd>
+                                            <dd>SoapClient::__getLastRequestHeaders()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFormatedXml" name="method_getFormatedXml" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFormatedXml()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFormatedXml(string  <span class="argument">$_string</span>, boolean  <span class="argument">$_asDomDocument = false</span>) : \DOMDocument|string|null</pre>
+                <p><em>Returns a XML string content as a DOMDocument or as a formated XML string</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_string </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_asDomDocument </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \DOMDocument|string|null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>DOMDocument::loadXML()</dd>
+                                            <dd>DOMDocument::saveXML()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_convertStringHeadersToArray" name="method_convertStringHeadersToArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">convertStringHeadersToArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">convertStringHeadersToArray(string  <span class="argument">$_headers</span>) : array</pre>
+                <p><em>Returns an associative array between the headers name and their respective values</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_headers </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setSoapHeader" name="method_setSoapHeader" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setSoapHeader()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setSoapHeader(string  <span class="argument">$_nameSpace</span>, string  <span class="argument">$_name</span>, mixed  <span class="argument">$_data</span>, boolean  <span class="argument">$_mustUnderstand = false</span>, string  <span class="argument">$_actor = null</span>) : boolean</pre>
+                <p><em>Sets a SoapHeader to send
+For more information, please read the online documentation on {@link http://www.php.net/manual/en/class.soapheader.php}</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_nameSpace </td>
+                                <td><p>SoapHeader namespace</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_name </td>
+                                <td><p>SoapHeader name</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_data </td>
+                                <td><p>SoapHeader data</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_mustUnderstand </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_actor </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getSoapClient()</dd>
+                                            <dd>SoapClient::__setSoapheaders()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setHttpHeader" name="method_setHttpHeader" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setHttpHeader()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setHttpHeader(string  <span class="argument">$_headerName</span>, mixed  <span class="argument">$_headerValue</span>) : boolean</pre>
+                <p><em>Sets the SoapClient Stream context HTTP Header name according to its value
+If a context already exists, it tries to modify it
+It the context does not exist, it then creates it with the header name and its value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_headerName </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_headerValue </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getSoapClient()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_length" name="method_length" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">length()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">length() : integer</pre>
+                <p><em>Method alias to count</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::count()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_count" name="method_count" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">count()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">count() : integer</pre>
+                <p><em>Method returning item length, alias to length</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getInternArrayToIterate()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::getInternArrayToIterateIsArray()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_current" name="method_current" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">current()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">current() : mixed</pre>
+                <p><em>Method returning the current element</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::offsetGet()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_next" name="method_next" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">next()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">next() : integer</pre>
+                <p><em>Method moving the current position to the next element</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getInternArrayToIterateOffset()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterateOffset()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_rewind" name="method_rewind" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">rewind()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">rewind() : integer</pre>
+                <p><em>Method resetting itemOffset</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterateOffset()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_valid" name="method_valid" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">valid()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">valid() : boolean</pre>
+                <p><em>Method checking if current itemOffset points to an existing item</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getInternArrayToIterateOffset()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::offsetExists()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_key" name="method_key" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">key()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">key() : integer</pre>
+                <p><em>Method returning current itemOffset value, alias to getInternArrayToIterateOffset</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getInternArrayToIterateOffset()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_item" name="method_item" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">item()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">item(integer  <span class="argument">$_index</span>) : mixed</pre>
+                <p><em>Method alias to offsetGet</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$_index </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html#method_offsetGet"><span class="namespace-wrapper">\RcoreNwmlsImageWsdlClass::offsetGet()</span></a></dd>
+                                                                                                <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::offsetGet()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add" name="method_add" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">add(mixed  <span class="argument">$_item</span>) : boolean</pre>
+                <p><em>Default method adding item to array</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_item </td>
+                                <td><p>value</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getAttributeName()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::__toString()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::_set()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::_get()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterate()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterateIsArray()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterateOffset()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_toSend" name="method_toSend" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">toSend()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">toSend() : mixed</pre>
+                <p><em>Method to call when sending data to request for *array* type class</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getAttributeName()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::__toString()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::_get()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_first" name="method_first" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">first()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">first() : mixed</pre>
+                <p><em>Method returning the first item</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::item()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_last" name="method_last" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">last()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">last() : mixed</pre>
+                <p><em>Method returning the last item</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::item()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::length()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_offsetExists" name="method_offsetExists" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">offsetExists()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">offsetExists(integer  <span class="argument">$_offset</span>) : boolean</pre>
+                <p><em>Method testing index in item</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$_offset </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::getInternArrayToIterateIsArray()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::getInternArrayToIterate()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_offsetGet" name="method_offsetGet" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">offsetGet()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">offsetGet(integer  <span class="argument">$_offset</span>) : mixed</pre>
+                <p><em>Method returning the item at &quot;index&quot; value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$_offset </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::offsetExists()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_offsetSet" name="method_offsetSet" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">offsetSet()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">offsetSet(mixed  <span class="argument">$_offset</span>, mixed  <span class="argument">$_value</span>) : null</pre>
+                <p><em>Method useless but necessarly overridden, can&#039;t set</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_offset </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_value </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_offsetUnset" name="method_offsetUnset" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">offsetUnset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">offsetUnset(mixed  <span class="argument">$_offset</span>) : null</pre>
+                <p><em>Method useless but necessarly overridden, can&#039;t unset</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_offset </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getResult" name="method_getResult" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getResult()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getResult() : mixed</pre>
+                <p><em>Method returning current result from Soap call</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLastError" name="method_getLastError" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLastError()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLastError() : array</pre>
+                <p><em>Method returning last errors occured during the calls</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLastErrorForMethod" name="method_getLastErrorForMethod" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLastErrorForMethod()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLastErrorForMethod(string  <span class="argument">$_methoName</span>) : \SoapFault|null</pre>
+                <p><em>Method getting the last error for a certain method</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_methoName </td>
+                                <td><p>method name to get error from</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \SoapFault|null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInternArrayToIterate" name="method_getInternArrayToIterate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInternArrayToIterate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInternArrayToIterate() : array</pre>
+                <p><em>Method returning intern array to iterate trough</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setInternArrayToIterate" name="method_setInternArrayToIterate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setInternArrayToIterate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setInternArrayToIterate(array  <span class="argument">$_internArrayToIterate</span>) : array</pre>
+                <p><em>Method setting intern array to iterate trough</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$_internArrayToIterate </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInternArrayToIterateOffset" name="method_getInternArrayToIterateOffset" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInternArrayToIterateOffset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInternArrayToIterateOffset() : integer</pre>
+                <p><em>Method returnint intern array index when iterating trough</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_initInternArrayToIterate" name="method_initInternArrayToIterate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">initInternArrayToIterate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">initInternArrayToIterate(array  <span class="argument">$_array = array()</span>, boolean  <span class="argument">$_internCall = false</span>) : void</pre>
+                <p><em>Method initiating internArrayToIterate</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$_array </td>
+                                <td><p>the array to iterate trough</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_internCall </td>
+                                <td><p>indicates that methods is calling itself</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                                                            <dt>Uses</dt>
+                                                                <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterate()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterateOffset()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::setInternArrayToIterateIsArray()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::getAttributeName()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::initInternArrayToIterate()</dd>
+                                            <dd>RcoreNwmlsImageWsdlClass::__toString()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setInternArrayToIterateOffset" name="method_setInternArrayToIterateOffset" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setInternArrayToIterateOffset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setInternArrayToIterateOffset(integer  <span class="argument">$_internArrayToIterateOffset</span>) : integer</pre>
+                <p><em>Method setting intern array offset when iterating trough</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$_internArrayToIterateOffset </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInternArrayToIterateIsArray" name="method_getInternArrayToIterateIsArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInternArrayToIterateIsArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInternArrayToIterateIsArray() : boolean</pre>
+                <p><em>Method returning true if intern array is an actual array</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setInternArrayToIterateIsArray" name="method_setInternArrayToIterateIsArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setInternArrayToIterateIsArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setInternArrayToIterateIsArray(boolean  <span class="argument">$_internArrayToIterateIsArray = false</span>) : boolean</pre>
+                <p><em>Method setting if intern array is an actual array</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$_internArrayToIterateIsArray </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method__set" name="method__set" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">_set()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">_set(string  <span class="argument">$_name</span>, mixed  <span class="argument">$_value</span>) : boolean</pre>
+                <p><em>Generic method setting value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_name </td>
+                                <td><p>property name to set</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_value </td>
+                                <td><p>property value to use</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method__get" name="method__get" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">_get()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">_get(string  <span class="argument">$_name</span>) : mixed</pre>
+                <p><em>Generic method getting value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_name </td>
+                                <td><p>property name to get</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAttributeName" name="method_getAttributeName" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAttributeName()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAttributeName() : string</pre>
+                <p><em>Method returning alone attribute name when class is *array* type</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_valueIsValid" name="method_valueIsValid" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">valueIsValid()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">valueIsValid(mixed  <span class="argument">$_value</span>) : boolean</pre>
+                <p><em>Generic method telling if current value is valid according to the attribute setted with the current value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_value </td>
+                                <td><p>the value to test</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___toString" name="method___toString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__toString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__toString() : string</pre>
+                <p><em>Method returning the class name</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p><strong>CLASS</strong></p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRetrieveImagesResult" name="method_getRetrieveImagesResult" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRetrieveImagesResult()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRetrieveImagesResult() : string|null</pre>
+                <p><em>Get RetrieveImagesResult value</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string|null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setRetrieveImagesResult" name="method_setRetrieveImagesResult" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setRetrieveImagesResult()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setRetrieveImagesResult(string  <span class="argument">$_retrieveImagesResult</span>) : string</pre>
+                <p><em>Set RetrieveImagesResult value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_retrieveImagesResult </td>
+                                <td><p>the RetrieveImagesResult</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setSoapClient" name="method_setSoapClient" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setSoapClient()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setSoapClient(\SoapClient  <span class="argument">$_soapClient</span>) : \SoapClient</pre>
+                <p><em>Static method setting current SoapClient</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\SoapClient</td>
+                                <td>$_soapClient </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \SoapClient
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setResult" name="method_setResult" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">setResult()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setResult(mixed  <span class="argument">$_result</span>) : mixed</pre>
+                <p><em>Method setting current result from Soap call</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$_result </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_saveLastError" name="method_saveLastError" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">saveLastError()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">saveLastError(string  <span class="argument">$_methoName</span>, \SoapFault  <span class="argument">$_soapFault</span>) : boolean</pre>
+                <p><em>Method saving the last error returned by the SoapClient</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$_methoName </td>
+                                <td><p>the method called when the error occurred</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>\SoapFault</td>
+                                <td>$_soapFault </td>
+                                <td><p>l'objet de l'erreur</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true|false</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setLastError" name="method_setLastError" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setLastError()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setLastError(array  <span class="argument">$_lastError</span>) : array</pre>
+                <p><em>Method setting last errors occured during the calls</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$_lastError </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/RcoreNwmlsImageWsdlClass.html"><div class="path-wrapper">\RcoreNwmlsImageWsdlClass</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">RcoreNwmlsImageStructRetrieveImagesResponse.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Retrieve/Response/RcoreNwmlsImageStructRetrieveImagesResponse.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on January 4th, 2017 at 13:25.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?php
+/**
+ * File for the class which returns the class map definition
+ * @package RcoreNwmlsImage
+ * @author RapidMod.com
+ * @author 813.330.0522
+ * @version 20150429-01
+ * @date 2017-01-04
+ */
+/**
+ * Class which returns the class map definition by the static method RcoreNwmlsImageClassMap::classMap()
+ * @package RcoreNwmlsImage
+ * @author RapidMod.com
+ * @author 813.330.0522
+ * @version 20150429-01
+ * @date 2017-01-04
+ */
+class RcoreNwmlsImageClassMap
+{
+	/**
+	 * This method returns the array containing the mapping between WSDL structs and generated classes
+	 * This array is sent to the SoapClient when calling the WS
+	 * @return array
+	 */
+	final public static function classMap()
+	{
+		return array (
+			'RetrieveImages' => 'RcoreNwmlsImageStructRetrieveImages',
+			'RetrieveImagesResponse' => 'RcoreNwmlsImageStructRetrieveImagesResponse',
+		);
+	}
+}
+

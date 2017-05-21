@@ -1,0 +1,21 @@
+<?php
+/**
+ * @package RcoreNwmlsImage
+ * @author RapidMod.com
+ * @author 813.330.0522
+ * @version 20150429-01
+ * @date 2017-01-04
+ */
+/**
+ * Includes for all generated classes files
+ * @author RapidMod.com
+ * @author 813.330.0522
+ * @version 20150429-01
+ * @date 2017-01-04
+ */
+require_once dirname(__FILE__) . '/RcoreNwmlsImageWsdlClass.php';
+require_once dirname(__FILE__) . '/Retrieve/Response/RcoreNwmlsImageStructRetrieveImagesResponse.php';
+require_once dirname(__FILE__) . '/Retrieve/Images/RcoreNwmlsImageStructRetrieveImages.php';
+require_once dirname(__FILE__) . '/Retrieve/RcoreNwmlsImageServiceRetrieve.php';
+require_once dirname(__FILE__) . '/RcoreNwmlsImageClassMap.php';
+
